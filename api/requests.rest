@@ -2,14 +2,14 @@ POST http://localhost:3001/api/auth/register
 Content-Type: application/json
 
 {
-    "firstName": "John",
+    "firstName": "Jane",
     "lastName": "Doe",
-    "email": "john.doe@gmail.com",
-    "password": "123456",
-    "street": "123 Main St",
-    "city": "New York",
-    "state": "NY",
-    "postalCode": "10001",
+    "email": "jane.doe@gmail.com",
+    "password": "JaneDoe123",
+    "street": "123 Yew St",
+    "city": "Vancouver",
+    "state": "BC",
+    "postalCode": "V6T1Z4",
     "phone": "123-456-7890"
 }
 
@@ -49,15 +49,14 @@ GET http://localhost:3001/api/restaurant/get/64d703591a5c97a524e3c831
 
 ###
 
-POST http://localhost:3001/api/order/create
+POST http://localhost:3001/api/auth/login
 Content-Type: application/json
 
 {
-    "restaurantId": "64d703591a5c97a524e3c831",
-    "items": [
-        {
-            "itemId": "64d70a6f494897001223850e",
-            "quantity": 2
-        }
-    ]
+    "email": "jane.doe@gmail.com",
+    "password": "JaneDoe123"
 }
+
+###
+
+DELETE http://localhost:3001/api/auth/delete/64d735103084c50b35ceaef2
