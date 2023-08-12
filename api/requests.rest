@@ -1,0 +1,63 @@
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@gmail.com",
+    "password": "123456",
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10001",
+    "phone": "123-456-7890"
+}
+
+###
+
+POST http://localhost:3001/api/restaurant/create
+Content-Type: application/json
+
+{
+    "name": "Restaurant 1",
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10001",
+    "phone": "123-456-7890",
+    "menu": []
+}
+
+###
+
+PUT http://localhost:3001/api/restaurant/update/64d703591a5c97a524e3c831
+Content-Type: application/json
+
+{
+    "name": "Restaurant 2",
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10001",
+    "phone": "123-456-7890",
+    "menu": ["64d70a6f494897001223850e"]
+}
+
+###
+
+GET http://localhost:3001/api/restaurant/get/64d703591a5c97a524e3c831
+
+###
+
+POST http://localhost:3001/api/order/create
+Content-Type: application/json
+
+{
+    "restaurantId": "64d703591a5c97a524e3c831",
+    "items": [
+        {
+            "itemId": "64d70a6f494897001223850e",
+            "quantity": 2
+        }
+    ]
+}
