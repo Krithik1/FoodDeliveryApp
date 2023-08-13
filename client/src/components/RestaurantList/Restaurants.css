@@ -1,0 +1,14 @@
+.Restaurants {
+    margin-left: 1em;
+}
+
+.heading {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.restaurants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}

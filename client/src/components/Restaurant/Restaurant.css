@@ -1,0 +1,39 @@
+:root {
+	--primary: #D81E5B;
+	--secondary: #8A4EFC;
+	--light: #EEE;
+	--light-alt: #61759b;
+	--dark: #131A26;
+	--dark-alt: #202B3E;
+    
+}
+
+.restaurant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    /* margin: 16px;
+    padding: 16px; */
+    background-color: var(--light);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  .restaurant-name {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 8px 16px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .restaurant-description {
+    background-color: var(--light);
+    color: var(--dark);
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+  

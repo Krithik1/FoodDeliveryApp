@@ -16,7 +16,7 @@ const OrderSchema: Schema = new Schema(
             type: Schema.Types.ObjectId,
             ref: "Product",
             required: true
-        }],
+        },],
         status: {
             type: Boolean,
             default: false
