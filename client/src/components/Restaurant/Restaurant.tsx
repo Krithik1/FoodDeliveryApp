@@ -13,8 +13,8 @@ const Restaurant: React.FC<RestaurantProps> = ({ name, description, id, onClick 
     return (
         <div className="restaurant-card" id={id} onClick={onClick}>
             {/* <img className="restaurant-image" src={imageUrl} alt={`${name} Restaurant`} /> */}
-            <h3 className="restaurant-name">{name}</h3>
-            <p className="restaurant-description">{description}</p>
+            <h3 className="restaurant-card-name">{name}</h3>
+            <p className="restaurant-card-description">{description}</p>
         </div>
     );
 };

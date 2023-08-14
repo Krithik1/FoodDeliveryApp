@@ -40,3 +40,15 @@
 .loginform button:hover {
     background-color: var(--secondary);
 }
+
+.registernow {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary); /* Change text color */
+    /* margin-top: 10px; Add some spacing */
+    transition: color 0.3s;
+}
+
+.registernow:hover {
+    color: var(--secondary);
+}

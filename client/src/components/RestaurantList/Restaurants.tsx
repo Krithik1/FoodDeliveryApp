@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Restaurant from '../Restaurant/Restaurant';
 import './Restaurants.css';
 
 function Restaurants() {
+    const navigate = useNavigate();
     const [restaurants, setRestaurants] = useState<any[]>([]);
 
     useEffect(() => {
@@ -26,7 +28,7 @@ function Restaurants() {
                     description={restaurant.description}
                     id={restaurant._id}
                     onClick={() => {
-                        // Handle click on restaurant card
+                        navigate(`/restaurant/${restaurant._id}`);
                     }}
                 />
             ))}

@@ -1,0 +1,47 @@
+.NavBar {
+    display: flex;
+    width: auto;
+    font-size: large;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 2em;
+    /* background-color: var(--primary); */
+}
+
+.heading {
+    margin-top: 0.4em;
+}
+
+.home, .home:hover {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    text-decoration: none;
+    color: var(--light);
+}
+
+.accountinfologout {
+    display: flex;
+    margin-left: auto;
+}
+
+.accountinfo {
+    margin-right: 1em;
+}
+
+.accountinfo,.logout {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 0.5em 1em;
+    font-size: large;
+    border-radius: 0.5em;
+    transition: 0.3s;
+}
+
+.accountinfo:hover,.logout:hover {
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: var(--light);
+}

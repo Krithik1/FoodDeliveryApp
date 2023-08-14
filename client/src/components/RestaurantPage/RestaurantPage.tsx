@@ -9,12 +9,9 @@ interface RestaurantData {
     menu: string[];
 }
 
-interface RestaurantPageProps {
-    restaurantId: string;
-}
-
-const RestaurantPage: React.FC<RestaurantPageProps> = ({ restaurantId }) => {
+const RestaurantPage: React.FC = () => {
     const [restaurantData, setRestaurantData] = useState<RestaurantData | null>(null);
+    const restaurantId = window.location.pathname.split('/').pop();
 
     useEffect(() => {
         axios.get(`http://localhost:3001/api/restaurant/get/${restaurantId}`) // Replace with your actual API endpoint

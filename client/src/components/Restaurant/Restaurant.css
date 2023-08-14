@@ -22,7 +22,11 @@
     transition: 0.3s;
 }
 
-.restaurant-name {
+.restaurant-card:hover {
+    transform: scale(1.05);
+}
+
+.restaurant-card-name {
     background-color: var(--light);
     color: var(--dark);
     padding: 8px 16px;
@@ -30,7 +34,7 @@
     font-weight: bold;
 }
 
-.restaurant-description {
+.restaurant-card-description {
     background-color: var(--light);
     color: var(--dark);
     margin-top: 5px;
