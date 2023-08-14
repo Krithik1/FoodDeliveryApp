@@ -52,7 +52,7 @@ export const registerUser = async (req: Request, res: Response) => {
         return res.status(401).json({ error: 'Invalid credentials' });
       }
   
-      res.status(200).json({ login: "Success" });
+      res.status(201).json({ login: "Success" });
     } catch (error) {
       res.status(500).json({ error: 'Failed to login' });
     }

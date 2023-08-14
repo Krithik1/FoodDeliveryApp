@@ -6,6 +6,10 @@ const RestaurantSchema: Schema = new Schema(
             type: String,
             required: true
         },
+        description: {
+            type: String,
+            required: true
+        },
         address: {
             street: {
                 type: String,

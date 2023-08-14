@@ -1,0 +1,62 @@
+.registerform {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 4em;
+    width: 100%;
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1.5em;
+    /* background-color: var(--light); */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registerform input {
+    padding: 0.75em;
+    max-width: fit-content;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.registerform button {
+    padding: 0.75em;
+    margin: 1em 0;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registerform button:hover {
+    background-color: var(--secondary);
+}
+
+.name,
+.password,
+.address {
+    display: flex;
+}
+
+.streetAddress {
+    width: 50%;
+}
+
+.city {
+    width: 10%;
+}
+
+.state {
+    width: 20%;
+}
+
+.postalCode {
+    width: 20%;
+}

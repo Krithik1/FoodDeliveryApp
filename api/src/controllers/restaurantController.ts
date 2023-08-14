@@ -2,11 +2,12 @@ import { Request, Response } from "express";
 import RestaurantSchema from "../models/Restaurant";
 
 export const createRestaurant = async (req: Request, res: Response) => {
-    const { name, street, city, state, postalCode, phone, menu } = req.body;
+    const { name, description, street, city, state, postalCode, phone, menu } = req.body;
 
     try {
         const restaurant = await RestaurantSchema.create({
             name,
+            description,
             address: {
                 street,
                 city,
@@ -33,15 +34,25 @@ export const getRestaurant = async (req: Request, res: Response) => {
     }
 }
 
+export const getAllRestaurants = async (req: Request, res: Response) => {
+    try {
+        const restaurants = await RestaurantSchema.find();
+        return res.status(200).json(restaurants);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
+
 export const updateRestaurant = async (req: Request, res: Response) => {
     const { id } = req.params;
-    const { name, street, city, state, postalCode, phone, menu } = req.body;
+    const { name, description, street, city, state, postalCode, phone, menu } = req.body;
 
     try {
         const restaurant = await RestaurantSchema.findByIdAndUpdate(
             id,
             {
                 name,
+                description,
                 address: {
                     street,
                     city,

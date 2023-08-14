@@ -1,0 +1,42 @@
+/* LoginForm.css */
+.loginform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 400px;
+    /* Adjust the maximum width as needed */
+    margin: 2em auto;
+    padding: 1.5em;
+    /* background-color: var(--light); */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginform input {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.loginform button {
+    width: 100%;
+    padding: 0.75em;
+    margin: 1em 0;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginform button:hover {
+    background-color: var(--secondary);
+}
